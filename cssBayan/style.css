@@ -96,9 +96,6 @@
     color: #000000;
 }
 
-.accordion__check:checked ~ .accordion__container > .accordion__header > .accordion__title > .accordion__cross {
-    color: #000000;
-}
 .accordion__item:hover > .accordion__container > .accordion__header > .accordion__title > .accordion__content > .accordion__image {
     transition: 0.3s;
     margin: 0.5% auto;
