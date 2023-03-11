@@ -33,18 +33,6 @@
     transition: 0.3s;
 }
 
-.accordion__header:hover ~ .accordion__content > .accordion__image {
-    transition: 0.3s;
-    margin: 0.5% auto;
-    width: 45%;
-    height: 45%;
-}
-
-.accordion__header:hover > .accordion__title > .accordion__cross {
-    transition: 0.3s;
-    transform: rotate(45deg);
-}
-
 .accordion__title {
     display: flex;
     flex-direction: row;
@@ -53,6 +41,12 @@
     font-size: 2.6rem;
     font-weight: 600;
     cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.accordion__text {
+    font-size: 2.6rem;
+    font-weight: 600;
 }
 
 .accordion__check {
@@ -65,36 +59,41 @@
 }
 
 .accordion__content {
+    max-width: 100wv;
+    width: 100%;
     display: flex;
     justify-content: center;
     cursor: pointer;
+    margin: 0 auto;
 }
 
-.accordion__item:hover > .accordion__content > .accordion__image {
+.accordion__item:hover > .accordion__container > .accordion__header > .accordion__title > .accordion__content > .accordion__image {
     transition: 0.3s;
     margin: 0.5% auto;
     width: 45%;
     height: 45%;
 }
 
-.accordion__item:hover > .accordion__header > .accordion__title > .accordion__cross {
+.accordion__item:hover > .accordion__container > .accordion__header > .accordion__title > .accordion__cross {
     transition: 0.3s;
     transform: rotate(45deg);
 }
 
-.accordion__check:checked ~ .accordion__content > .accordion__image {
+.accordion__check:checked ~ .accordion__container > .accordion__header > .accordion__title > .accordion__content > .accordion__image {
     transition: 0.3s;
     margin: 0.5% auto;
     width: 45%;
     height: 45%;
 }
 
-.accordion__check:checked ~ .accordion__header > .accordion__title > .accordion__cross {
+.accordion__check:checked ~ .accordion__container > .accordion__header > .accordion__title > .accordion__cross {
     transition: 0.3s;
     transform: rotate(45deg);
 }
 
 .accordion__image {
+    display: flex;
+    flex-direction: column;
     max-width: 100vw;
     max-height: 100vh;
     width: 0%;
