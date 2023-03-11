@@ -99,8 +99,8 @@
 .accordion__item:hover > .accordion__container > .accordion__header > .accordion__title > .accordion__content > .accordion__image {
     transition: 0.3s;
     margin: 0.5% auto;
-    width: 45%;
-    height: 45%;
+    width: 35%;
+    height: 35%;
 }
 
 .accordion__item:hover > .accordion__container > .accordion__header > .accordion__title > .accordion__cross {
@@ -111,8 +111,8 @@
 .accordion__check:checked ~ .accordion__container > .accordion__header > .accordion__title > .accordion__content > .accordion__image {
     transition: 0.3s;
     margin: 0.5% auto;
-    width: 45%;
-    height: 45%;
+    width: 35%;
+    height: 35%;
 }
 
 .accordion__check:checked ~ .accordion__container > .accordion__header > .accordion__title > .accordion__cross {
