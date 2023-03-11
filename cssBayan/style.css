@@ -13,7 +13,7 @@
     font-family: 'Poppins', 'Arial', sans-serif;
     font-size: 1.6rem;
     background-color: #f9fce9;
-    color: rgb(12, 12, 12);
+    color: #000000;
 }
 
 .wrapper {
@@ -37,11 +37,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    color: #3992f7;
     align-items: center;
     font-size: 2.6rem;
     font-weight: 600;
     cursor: pointer;
     flex-wrap: wrap;
+    transition: 0.3s;
 }
 
 .accordion__text {
@@ -54,8 +56,9 @@
 }
 
 .accordion__cross {
+    opacity: 0;
     font-size: 3.6rem;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .accordion__content {
@@ -67,6 +70,35 @@
     margin: 0 auto;
 }
 
+.accordion:hover > .accordion__item > .accordion__container > .accordion__header > .accordion__title > .accordion__cross {
+    transition: 0.2s;
+    opacity: 1;
+}
+
+.accordion:hover > .accordion__item > .accordion__container > .accordion__header > .accordion__title {
+    transition: 0.3s;
+    color: #000000;
+}
+
+.accordion__title:active > .accordion__text {
+    color: #3992f7;
+}
+
+.accordion__title:active > .accordion__cross {
+    color: #3992f7;
+}
+
+.accordion__title:active > .accordion__content > .accordion__image {
+    opacity: 0.8;
+}
+
+.accordion__check:checked ~ .accordion__container > .accordion__header > .accordion__title {
+    color: #000000;
+}
+
+.accordion__check:checked ~ .accordion__container > .accordion__header > .accordion__title > .accordion__cross {
+    color: #000000;
+}
 .accordion__item:hover > .accordion__container > .accordion__header > .accordion__title > .accordion__content > .accordion__image {
     transition: 0.3s;
     margin: 0.5% auto;
