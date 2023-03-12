@@ -58,8 +58,12 @@
 
 .accordion__cross {
     opacity: 0;
-    font-size: 3.6rem;
     transition: 0.2s;
+    max-width: 100%;
+    max-height: 100%;
+    width: 2rem;
+    height: 2rem;
+    fill: #3992f7;
 }
 
 .accordion__content {
@@ -76,7 +80,7 @@
 }
 
 .accordion__title:active > .accordion__cross {
-    color: #3992f7;
+    fill: #3992f7 !important;
 }
 
 .accordion__title:active > .accordion__content > .accordion__image {
@@ -95,6 +99,7 @@
 }
 
 .accordion__check:checked ~ .accordion__container > .accordion__header > .accordion__title > .accordion__cross {
+    fill: #000000;
     transition: 0.3s;
     transform: rotate(45deg);
 }
@@ -116,10 +121,6 @@
         font-size: 3.6rem;
     }
 
-    .accordion__cross {
-        font-size: 2.8rem;
-    }
-
     .accordion__text {
         font-size: 2.2rem;
         font-weight: 600;
@@ -134,10 +135,6 @@
 
     .main-title {
         font-size: 2.2rem;
-    }
-
-    .accordion__cross {
-        font-size: 2.3rem;
     }
 
     .accordion__text {
@@ -161,6 +158,7 @@
     }
 
     .accordion:hover > .accordion__item > .accordion__container > .accordion__header > .accordion__title > .accordion__cross {
+        fill: #000000;
         transition: 0.2s;
         opacity: 1;
     }
